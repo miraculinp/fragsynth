@@ -1,0 +1,46 @@
+﻿[project]
+name = "fragsynth"
+version = "0.1.0"
+description = "Publication-grade fragment-based molecule construction platform (COCONUT + ChEMBL)"
+authors = [{name = "Miracle Olapade", email = "olapademiracleo@gmail.com"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["cheminformatics", "drug-discovery", "fragment-based", "natural-products", "rdkit"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Intended Audience :: Science/Research"
+]
+
+dependencies = [
+    "rdkit>=2023.09",
+    "pandas",
+    "pyarrow",
+    "tqdm",
+    "numpy",
+    "pydantic>=2.0"
+]
+
+[project.optional-dependencies]
+dev = ["jupyterlab", "pytest", "black", "ruff", "mypy"]
+notebooks = ["jupyterlab", "matplotlib", "seaborn"]
+
+[project.urls]
+Homepage = "https://github.com/miraculinp/fragsynth"
+Repository = "https://github.com/miraculinp/fragsynth"
+Documentation = "https://github.com/miraculinp/fragsynth#readme"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["fragsynth"]
+
+[tool.hatch.build]
+include = [
+    "fragsynth/",
+    "fragsynth/data/*.parquet"
+]
