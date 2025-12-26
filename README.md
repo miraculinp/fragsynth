@@ -1,6 +1,6 @@
 # FragSynth
 
-A publication-grade, rule-based fragment library and molecule recombination platform built from COCONUT natural products and ChEMBL bioactive compounds.
+A rule-based fragment library and molecule recombination platform built from COCONUT natural products and ChEMBL bioactive compounds.
 
 ## Author
 Miracle Olapade [](https://github.com/miraculinp)
